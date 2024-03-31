@@ -193,6 +193,17 @@ button {
     display: none;
 }
 
+/* DRAG */
+.draggable {
+    position: absolute;
+    user-select: none;
+    cursor: grab;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
 /* ROW */
 .rows {
     display: flex;
