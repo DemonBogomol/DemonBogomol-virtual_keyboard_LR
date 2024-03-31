@@ -5,6 +5,7 @@ const rows = document.querySelectorAll('.rows');
 const keys = document.querySelectorAll('.keys');
 const capsLk = document.querySelector('.capslk-key');
 const shiftKeys = document.querySelectorAll('.shift-key');
+console.log("В виртуальной клавиатуре реализованно: 1. Темы. 2. Перетаскивание.");
 
 
 // KEYBOARD KEYS
