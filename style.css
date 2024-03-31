@@ -4,7 +4,7 @@
     --clr-bg: hsl(90, 10%, 96%);
     --clr-font: hsl(340, 7%, 17%);
     --clr-keyboard: hsl(0, 0%, 94%);
-    --clr-btn: #ffffff;
+    --clr-btn: #bfb9f8;
     --clr-btn-hover: hsl(0, 0%, 100%);
     --clr-svg-filter: invert(6%) sepia(5%) saturate(3443%) hue-rotate(289deg) brightness(85%) contrast(75%);
 
@@ -16,6 +16,17 @@
     /* TRANSITION */
     --transition: all 0.3s ease-in-out;
 }
+
+/* DARKMODE */
+.darkmode {
+    --clr-bg: hsl(340, 7%, 8%);
+    --clr-font: hsl(90, 13%, 94%);
+    --clr-keyboard: hsl(340, 7%, 17%);
+    --clr-btn-hover: hsl(336, 8%, 12%);
+    --clr-svg-filter: invert(92%) sepia(2%) saturate(238%) hue-rotate(49deg) brightness(107%) contrast(92%);
+}
+
+
 
 /**** CSS RESET ****/
 *, *::before, *::after {
@@ -101,6 +112,35 @@ button {
     background-color: var(--clr-keyboard);
 }
 
+/* LIGHT/DARK MODE TOGGLE */
+.dark-mode-toggle::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url("./icons/circle-half-stroke.svg");
+    filter: var(--clr-svg-filter);
+}
+
+/* COLOR PICKER */
+.color-picker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    padding: 0;
+    width: 3.4em;
+    height: 3.4em;
+    border: none;
+    cursor: pointer;
+}
+
+.color-picker::-webkit-color-swatch,
+.color-picker::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+
 
 /**** CONTAINER ****/
 .container {
@@ -120,7 +160,7 @@ button {
     word-break: break-all;
     overflow-y: scroll;
     resize: none;
-    margin-top: 1em;
+    margin-top: -8em;
     padding: 1em;
     width: 45em;
     height: 25em;

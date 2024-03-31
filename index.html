@@ -16,14 +16,22 @@
 </head>
 
 <body>
-
+    <!-- Toggles -->
+    <div class="toggles">
+        <!-- Keyboard Toggle -->
+        <button class="kb-toggle kb-toggle-active" aria-label="Toggle virtual keyboard."></button>
+        <!-- Light/Dark Mode Toggle -->
+        <button class="dark-mode-toggle" aria-label="Toggle between light and dark mode."></button>
+        <!-- Color Picker -->
+        <input type="color" name="color-picker" class="color-picker" aria-label="Color picker for choosing the color of the keyboard keys.">
+    </div>
     
     <!-- Textarea and Keyboard -->
     <div class="container">
         <!-- Textarea -->
         <textarea name="textarea" class="textarea" spellcheck="false" placeholder="Start Typing Here..."></textarea>
         <!-- Keyboard -->
-        <div class="keyboard-wrapper">
+        <div class="keyboard-wrapper draggable">
             <div class="keyboard-keys">
                 <!-- ROW 1 -->
                 <div class="rows">
@@ -100,6 +108,8 @@
 
     <!-- Custom Scripts -->
     <script src="./keyboard.js"></script>
+    <script src="./draggable.js"></script>
+    <script src="./lightdarkmode.js"></script>
 </body>
 
 </html>
